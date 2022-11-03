@@ -5,7 +5,7 @@ import './App.css';
 import './components/Navbar/Navbar.css'
 function App() {
   return (
-    <div>
+    <div className='conteiner-page' >
       <Navbar/>
     </div>
   );

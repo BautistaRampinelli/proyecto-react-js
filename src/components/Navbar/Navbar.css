@@ -1,19 +1,34 @@
+.titulo-principal-header {
+    font-size: 100px;
+    font-family: 'Staatliches', cursive; 
+    color: green;
+    padding: 80px;
+    text-align: center;
+}
+
 .conteiner-navbar {
-    width: 100%;
-    height: 5%;
-    background-color: aquamarine;
+    background-color: bisque;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-evenly;
+    width: 100%;
 }
+
 
 .list-navbar {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    font-size: 20px;
+    font-family: 'Staatliches', cursive; 
+    background-color: white;
+    border: green double 3px;
     text-decoration: none;
+    text-align: center;
+    color: white;
 }
 
-a {
-    text-decoration: none;
-    text-decoration-color: black;
+.subtitulo-bienvenida {
+    font-size: 20px;
+    text-align:  center;
 }
