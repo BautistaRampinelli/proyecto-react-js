@@ -1,13 +1,15 @@
 .titulo-principal-header {
-    font-size: 100px;
-    font-family: 'Staatliches', cursive; 
+    margin-left:7%;
     color: green;
-    padding: 80px;
-    text-align: center;
+    font-size:40px ;
 }
 
 .conteiner-navbar {
+    display: flex;
+    justify-content: space-between;
     background-color: bisque;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    height:150px;
 }
 
 .navbar {
@@ -16,19 +18,19 @@
 
 
 .list-navbar {
+    list-style-type: none;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    font-size: 20px;
-    font-family: 'Staatliches', cursive; 
-    background-color: white;
-    border: green double 3px;
-    text-decoration: none;
-    text-align: center;
-    color: white;
+    flex-direction: row;
+    margin-right:30% ;
 }
 
-.subtitulo-bienvenida {
-    font-size: 20px;
-    text-align:  center;
+.secciones-navbar {
+    display:flex;
+    justify-content: space-between;
+    margin-left:50px;
+    text-decoration: none;
+    color: green;
+    margin-top: 40px;
+    font-size:20px ;
 }
+
