@@ -1,0 +1,11 @@
+.itemConteiner {
+    height: auto;
+    margin: 5% 20% 10% 20%;
+    border: 10px green solid;
+    background-color: bisque;
+}
+
+.imgProduct {
+    width: 200px;
+    height: 200px;
+}

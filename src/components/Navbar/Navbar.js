@@ -1,3 +1,4 @@
+import { Link, NavLink } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 const Navbar = () => {
     return (
@@ -6,25 +7,38 @@ const Navbar = () => {
             <nav className='navbar'>
                 <ul className='list-navbar'>
                     <li>
-                        <a className='secciones-navbar' href='#'>Inicio</a>
+                        <NavLink className="secciones-navbar" to="/">
+                            INICIO
+                        </NavLink>
                     </li>
                     <li>
-                        <a className='secciones-navbar' href='#'>Herramientas</a>
+                        <NavLink className="secciones-navbar" to="/categoria/electrodomesticos">
+                            ELECTRODOMÉSTICOS
+                        </NavLink>
                     </li>
                     <li>
-                        <a className='secciones-navbar' href='#'>Electrodomésticos</a>
+                        <NavLink className="secciones-navbar" to="/categoria/herramientas">
+                            HERRAMIENTAS
+                        </NavLink></li>
+                    <li>
+                        <NavLink className="secciones-navbar" to="/categoria/hogar">
+                            HOGAR
+                        </NavLink>
                     </li>
                     <li>
-                        <a className='secciones-navbar' href='#'>Jardín</a>
+                        <NavLink className="secciones-navbar" to="/categoria/construccon">
+                            CONSTRUCCIÓN
+                        </NavLink>
                     </li>
                     <li>
-                        <a className='secciones-navbar' href='#'>Hogar</a>
+                        <NavLink className="secciones-navbar" to="/categoria/contacto">
+                            CONTACTO
+                        </NavLink>
                     </li>
-                    <li>
-                        <a className='secciones-navbar' href='#'>Contacto</a>
-                    </li>
+                    <div>
+                        <Link to="/cart"><CartWidget/></Link>
+                    </div>
                 </ul>
-                <CartWidget/>
             </nav>
         </div>
     )
