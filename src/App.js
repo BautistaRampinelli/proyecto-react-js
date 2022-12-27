@@ -1,12 +1,12 @@
 import Navbar from './components/Navbar/Navbar';
-import ItemsListContainer from './components/ItemsListContainer/ItemsListContainer';
-import ItemDetailConteiner from './components/ItemDetailConteiner/ItemDetailConteiner';
+import ItemsListContainer from './pages/ItemsListContainer/ItemsListContainer';
+import ItemDetailConteiner from './pages/ItemDetailConteiner/ItemDetailConteiner';
 
 
 import './App.css';
 import './components/Navbar/Navbar.css';
-import './components/ItemsListContainer/ItemsListContainer.css';
-import './components/ItemDetailConteiner/ItemDetailConteiner.css';
+import './pages/ItemsListContainer/ItemsListContainer.css';
+import './pages/ItemDetailConteiner/ItemDetailConteiner.css';
 import  { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartWidget from './components/CartWidget/CartWidget';
 function App() {
