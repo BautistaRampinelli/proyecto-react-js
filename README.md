@@ -1,3 +1,7 @@
+Este proyecto es un e-commerce donde se utilizó la librería de Reactjs conectado con firestore.
+Es una tienda donde se venden todo tipo de cosas para un taller o un hogar, desde herramientas hasta electrodomésticos
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

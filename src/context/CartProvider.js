@@ -18,7 +18,9 @@ const CartProvider = ({children}) => {
         setCart([]);
     }
     return (
-        <cartContext.Provider value={{cart, addToCart}}>{children}</cartContext.Provider>
+        <cartContext.Provider value={{cart, addToCart}}>
+            {children}
+        </cartContext.Provider>
 
     )
 }

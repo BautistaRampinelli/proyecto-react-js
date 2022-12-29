@@ -10,7 +10,6 @@ const ItemDetail = ({productSelected}) => {
         <div>
             <h1>Cantidad de productos en tu carrito: {cart.length} </h1>
             <img alt={productSelected.title} src={`/assets/${productSelected.imageId}`} />
-            <h2>{productSelected.id}</h2>
             <h2>{productSelected.title}</h2>
             <h2>{productSelected.description}</h2>
             <h2>{productSelected.category}</h2>

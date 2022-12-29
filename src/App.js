@@ -9,17 +9,21 @@ import './pages/ItemsListContainer/ItemsListContainer.css';
 import './pages/ItemDetailConteiner/ItemDetailConteiner.css';
 import  { BrowserRouter, Routes, Route } from 'react-router-dom';
 import CartWidget from './components/CartWidget/CartWidget';
+import Cart from './pages/Cart/Cart';
+import CartProvider from './context/CartProvider';
 function App() {
   return (
-    <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        <Route path='/' element={<ItemsListContainer/>} />
-        <Route path='/categoria/:categoria' element={<ItemsListContainer/>} />
-        <Route path='detail' element={<ItemDetailConteiner/>} />
-        <Route path='cart' element={<CartWidget/>} />
-      </Routes>
-    </BrowserRouter>
+    <CartProvider>
+      <BrowserRouter>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<ItemsListContainer/>} />
+          <Route path='/categoria/:categoryName' element={<ItemsListContainer/>} />
+          <Route path='detail/:id' element={<ItemDetailConteiner/>} />
+          <Route path='cart' element={<Cart/>} />
+        </Routes>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

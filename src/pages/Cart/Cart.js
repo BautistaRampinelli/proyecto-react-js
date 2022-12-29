@@ -1,6 +1,7 @@
 import { useEffect, useContext, useState } from "react";
 import moment from "moment/moment";
-import {collection, addDoc, getFirestore} from 'firebase/firestore'
+import { cartContext } from "../../context/CartProvider";
+import {collection, addDoc, updateDoc, doc, getFirestore} from 'firebase/firestore'
 
 const Cart = () => {
     const {cart} = useContext(cartContext)

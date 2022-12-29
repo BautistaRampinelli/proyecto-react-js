@@ -1,13 +1,15 @@
-import ItemDetail from '../../components/ItemDetail/ItemDetail'
-import { useParams } from 'react-router-dom'
-import { useEffect, useState } from 'react'
-import {doc, getDoc, getFirestore} from 'firebase/firestore'
+import ItemDetail from '../../components/ItemDetail/ItemDetail';
+import { useParams } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import {doc, getDoc, getFirestore} from 'firebase/firestore';
+
+
 const ItemDetailConteiner = () => {
-    const [productSelected, setProductSelected] = useState()
-    const {id} = useParams()
+    const [productSelected, setProductSelected] = useState();
+    const {id} = useParams();
     const getProduct = () => {
-        const db = getFirestore()
-        const query = doc(db, 'items', id)
+        const db = getFirestore();
+        const query = doc(db, 'items', id);
         getDoc(query)
             .then((res) => {
                 setProductSelected({id: res.id, ...res.data()})
@@ -16,7 +18,7 @@ const ItemDetailConteiner = () => {
     }
 
     useEffect(() => {
-        getProduct()
+        getProduct();
     
     }, [id])
     return (
@@ -26,4 +28,4 @@ const ItemDetailConteiner = () => {
     )
 }
 
-export default ItemDetailConteiner
+export default ItemDetailConteiner;
