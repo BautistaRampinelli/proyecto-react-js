@@ -1,5 +1,10 @@
 Este proyecto es un e-commerce donde se utilizó la librería de Reactjs conectado con firestore.
-Es una tienda donde se venden todo tipo de cosas para un taller o un hogar, desde herramientas hasta electrodomésticos
+Es una tienda donde se venden todo tipo de cosas para un taller o un hogar, desde herramientas hasta electrodomésticos.
+Se pueden filtrar por categorías y se puede crear una orden de compra. Donde se ve el precio del producto, la cantidad y el precio total de la compra.
+Luego se reduce el stock.
+El proceso de compra lo podemos observar en el siguiente gif.
+### Proceso de compra:
+[proceso de compra](https://drive.google.com/file/d/1M2wbi99M8Cc2BcbBjfKirqBxN1sQB_26/view?usp=sharing)
 
 
 # Getting Started with Create React App

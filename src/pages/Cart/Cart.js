@@ -2,6 +2,7 @@ import { useEffect, useContext, useState } from "react";
 import moment from "moment/moment";
 import { cartContext } from "../../context/CartProvider";
 import {collection, addDoc, updateDoc, doc, getFirestore} from 'firebase/firestore'
+import './Cart.css'
 
 const Cart = () => {
     const {cart} = useContext(cartContext)
@@ -54,23 +55,24 @@ const Cart = () => {
 
     return (
         <div>
-            {cart.map((product) => (
-                <div key={product.id}>
-                    <img alt={product.title} src={`/assets/${product.imageId}`}/>
-                    <h2>{product.title}</h2>
-                    <h2>${product.price}</h2>
-                    <h2>Cantidad disponible: {product.quantity}</h2>
-                </div>
-            ))}
-            <div>
-                <h1>Total: {total}</h1>
-                <button onClick={createOrder}>Crear orden</button>
-                <div>
-                    <h2>Formulario</h2>
+            <div className="divFormCart">
+                    <h2 className="titleFormCart">Formulario</h2>
                     <input name="name" text="text" placeholder="Nombre" value={formValues.name} onChange={handleInputChange}/>
                     <input name="phone" text="text" placeholder="Teléfono" value={formValues.phone} onChange={handleInputChange}/>
                     <input name="email" text="text" placeholder="Email" value={formValues.email} onChange={handleInputChange}/>
                 </div>
+            {cart.map((product) => (
+                <div className="divProductCart" key={product.id}>
+                    <img className="imgProductCart" alt={product.title} src={`/assets/${product.imageId}`}/>
+                    <h2 className="titleProductCart">{product.title}</h2>
+                    <h2 className="priceProductCart">${product.price}</h2>
+                    <h2 className="quantityProductCart">Cantidad: {product.quantity}</h2>
+                </div>
+            ))}
+            <div className="divOrderCart">
+                <h1 className="totalCart">Total: ${total}</h1>
+                <button className="btnCreateOrder" onClick={createOrder}>CREAR ORDEN</button>
+                
             </div>
         </div>
     )
